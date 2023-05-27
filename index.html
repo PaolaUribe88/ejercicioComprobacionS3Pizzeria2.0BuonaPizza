@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/Bootstrap 5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>BuonaPizza</title>
+</head>
+<body onload="asignarEventos()">
+    <div class="container" id="padre">
+        <div class="row">
+            <div class="row" id="form">
+                    <div class="col-6">
+                        <h1> MEJORA TU PIZZA</h1><br>
+                        <h6>Puede elegir 3 ingredientes gratis. Cada ingrediente adicional cuesta $800 cada uno.</h6><br>
+                        <h6>Ingredientes diponibles para agregar a su pizza:</h6>  
+
+                            <p><input class="form-check-input" type="checkbox"  id="carne" name="carne" value="Carne">
+                            <label class="checkbox" for="carne"> Carne</label></p>
+
+                            <p><input class="form-check-input" type="checkbox"  id="pollo" name="pollo" value="Pollo">
+                            <label class="checkbox" for="pollo"> Pollo</label></p>
+
+                            <p><input class="form-check-input" type="checkbox"  id="tocino" name="tocino" value="Tocino">
+                            <label class="checkbox" for="tocino">Tocino</label></p>
+
+                            <p><input class="form-check-input" type="checkbox"  id="mozzarella" name="mozzarella" value="Mozzarella">
+                            <label class="checkbox" for="mozzarella">Mozzarella</label></p>
+
+                            <p><input class="form-check-input" type="checkbox"  id="champinon" name="champinon" value="Champiñon">
+                            <label class="checkbox" for="champinon">Champiñon</label></p>
+
+                            <p><input class="form-check-input" type="checkbox"  id="cebolla" name="cebolla" value="Cebolla">
+                            <label class="checkbox" for="cebolla">Cebolla</label></p>
+
+                            <p><input class="form-check-input" type="checkbox"  id="pinia" name="pinia" value="Piña">
+                            <label class="checkbox" for="pinia">Piña</label></p>
+
+                            <p><input class="form-check-input" type="checkbox"  id="pimenton" name="pimenton" value="Pimentos">
+                            <label class="checkbox" for="pimenton">Pimenton</label></p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>Los ingredientes <b>base</b> seleccionados son:</p>
+                                        <p id="ingredientesBase"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>Los ingredientes <b>extra</b> seleccionados son:</p>
+                                        <p id="ingredientesExtra"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h1>RESUMEN DEL PEDIDO</h1> <br>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h5>Pizza XL</h5> 
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b><p id="precioBasePizza">15000</p></b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h5>Ingredientes Extras</h5> 
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p id="totalIngredientesExtras"></p>
+                                        </div>
+                                    </div><br>
+                                    <div class="row">
+                                            <div class="col-md-8">
+                                                <h5>Propina sugerida:</h5> 
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p id="parrafoPropina"></p>
+                                            </div>
+                                    </div>
+                                    <div class="row">
+                                            <div class="col-md-8"> 
+                                                <input class="form-control" type="number" id="txtPropina" value="" placeholder="Ingresa propina...">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <input id="btnEnviar" type="button" class="btnEnviar"  value="Enviar pedido con propina">
+                                            </div>
+                                    </div>
+                                    
+                                </div>
+                                <hr>
+                            <!-- <p>Los Ingredientes seleccionados son:</p>
+                                <p id="ingredientesBase"></p>
+                                <p>Los Ingredientes <b>extras</b> seleccionado son:</p>
+                                <p id="ingredientesExtra"></p>
+                  
+                    </div>
+                    <div class="col-md-6 text-star">  
+                        
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-flex justify-content-between">
+                                                                   
+                                </div>
+                            </div>
+                            <div class="col">
+                                <b id="precioBasePizza">$15000</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-flex justify-content-between">
+                                                                       
+                                  </div>
+                            </div>
+                            <div class="col">
+                                <b><p id="totalIngredientesExtras">$</p></b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-flex justify-content-between">
+                                    
+                                  </div>
+                            </div>
+                            <div class="col">
+                                <b><p id="parrafoPropina"></p></b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-flex justify-content-between">
+                                    <input class="form-control" type="number" id="txtPropina" value="" placeholder="Ingresa propina...">                                    
+                                  </div>
+                            </div>
+                            <div class="col">
+                                <b><input id="btnEnviar" type="button" class="btnEnviar"  value="Enviar pedido con propina"></b>
+                            </div>
+                        </div><br> -->
+                            <!-- <div class="row">
+                                <div class="col">
+                                    <div class="col-md-6">
+                                        
+                                        <b><p id="totales"></p></b>
+                                    </div>
+                                </div>                            
+                            </div>-->
+                                    <!-- container totales-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    
+                                    <p id="totales"></p>  
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fin container totales-->
+                    </div>                                      
+            </div>
+        </div>    
+    </div>
+    <script src="assets/Bootstrap 5.3/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/mi.js"></script>
+    <br>
+    <footer id="mi_footer" class="mifooter">
+        <b> <p class="mifooter__eltextoreservado" align="center">TODOS LOS DERECHOS RESERVADOS ® J.U.</p> <!--&#174 codigo acci--> </b>    
+     </footer>
+</body>
+</html>

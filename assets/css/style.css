@@ -1,0 +1,49 @@
+body{
+    background-image: linear-gradient(90deg, #0c5e18 10%, #c0622c 60%, red 75%);
+}
+#padre{
+    padding-top: 50px;
+}
+#form{
+    background-color: aliceblue;
+    
+}
+#form > div{
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
+input:hover{
+    background-color:red;
+    color: black;
+}
+h1{
+    background-color: rgb(231, 228, 224);
+    border-radius: 20px;
+}
+h1:hover{
+    background-color: chartreuse;
+}
+#ingredientesBase{
+    color: blue;
+}
+#ingredientesExtra{
+    color: red;
+}
+#txtPropina{
+    background-color: rgb(216, 222, 226);
+    border-radius: 100px;
+}
+.btnEnviar{
+    border-radius: 100px;
+    background-color: black;
+    color: white;
+}
+#totales{
+    color:orangered;
+    background-color: rgb(16, 16, 16);
+    border-radius: 10px;
+    font-size: 25px;
+}
